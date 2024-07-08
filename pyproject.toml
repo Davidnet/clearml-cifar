@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "cifar10-jax"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+clu = "^0.0.12"
+tensorflow-datasets = "^4.9.6"
+flax = "0.8.4"
+jax = "0.4.26"
+
+
+[tool.poetry.group.dev.dependencies]
+pip-tools = "^7.4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,9 @@
+FROM nvcr.io/nvidia/jax:24.04-py3
+RUN pip install clu tensorflow==2.12.1 tensorflow-datasets flax==0.8.4
+# RUN pip install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html
+# RUN pip install sagemaker-training
+COPY train.py /opt/ml/code/marvik_demo.py
+# ENV SAGEMAKER_PROGRAM=marvik_demo.py
+WORKDIR /opt/ml/code
+ENTRYPOINT []
+CMD [ "python", "marvik_demo.py" ]
